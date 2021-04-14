@@ -7,7 +7,7 @@ export const fetchData = async (country) => {
 
     let changeableUrl = url;
     if (country) {
-        changeableUrl = `${url}/countries/${country}`
+        changeableUrl = `${url}/countries/${country}`;
     }
     try{
         const {data: {confirmed, recovered, deaths, lastUpdate}} = await axios.get(changeableUrl);
